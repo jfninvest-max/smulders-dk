@@ -61,13 +61,12 @@ export default function KontaktContent() {
               </div>
               <div>
                 <p className="text-[9px] tracking-widest text-white/30 uppercase mb-1">Telefon</p>
-                <a href="tel:+4861444405" className="text-white/60 hover:text-gold transition-colors">+48 61 44 41 405</a>
-                <br />
-                <a href="tel:+4861444318" className="text-white/60 hover:text-gold transition-colors">+48 61 44 41 318</a>
+                <a href="tel:+4861444405" className="inline-flex items-center min-h-[44px] text-white/60 hover:text-gold transition-colors">+48 61 44 41 405</a>
+                <a href="tel:+4861444318" className="inline-flex items-center min-h-[44px] text-white/60 hover:text-gold transition-colors">+48 61 44 41 318</a>
               </div>
               <div>
                 <p className="text-[9px] tracking-widest text-white/30 uppercase mb-1">E-mail</p>
-                <a href="mailto:office@smulders.pl" className="text-gold hover:opacity-75 transition-opacity">office@smulders.pl</a>
+                <a href="mailto:office@smulders.pl" className="inline-flex items-center min-h-[44px] text-gold hover:opacity-75 transition-opacity">office@smulders.pl</a>
               </div>
             </motion.div>
           </motion.div>
