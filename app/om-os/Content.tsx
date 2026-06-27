@@ -81,7 +81,7 @@ export default function OmOsContent() {
               className={`px-8 py-12 text-center ${i < stats.length - 1 ? "border-r border-white/5" : ""}`}
             >
               <p className="font-display text-4xl md:text-5xl font-normal text-gold mb-2">{s.value}</p>
-              <p className="font-sans text-[10px] tracking-[0.25em] text-white/40 uppercase">{s.label}</p>
+              <p className="font-sans text-[10px] tracking-tight md:tracking-[0.25em] text-white/40 uppercase">{s.label}</p>
             </motion.div>
           ))}
         </div>
