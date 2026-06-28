@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const fade = { hidden: { opacity: 0, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } } };
+const fade = { hidden: { opacity: 1, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] } } };
 const stagger = { visible: { transition: { staggerChildren: 0.11 } } };
 
 const series = [
@@ -139,14 +139,13 @@ export default function IndendoersBokseContent() {
       </section>
 
       {/* Series */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col gap-28">
+      <section className="py-10 md:py-24 px-6 max-w-7xl mx-auto">
+        <div className="flex flex-col gap-16 md:gap-28">
           {series.map((s, i) => (
             <motion.div
               key={s.name}
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
+              animate="visible"
               variants={stagger}
               className={`grid md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}
             >
@@ -185,8 +184,8 @@ export default function IndendoersBokseContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 text-center border-t border-white/5">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+      <section className="py-10 md:py-20 px-6 text-center border-t border-white/5">
+        <motion.div initial="hidden" animate="visible" variants={stagger}>
           <motion.h2 variants={fade} className="font-display text-3xl md:text-4xl font-normal mb-5">
             Find den rigtige hesteboks til din stald
           </motion.h2>

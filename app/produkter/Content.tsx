@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const fade = { hidden: { opacity: 0, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } } };
+const fade = { hidden: { opacity: 1, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
 const categories = [
@@ -17,13 +17,13 @@ const categories = [
   {
     href: "/produkter/bokse-udendoers",
     label: "Udendørs Bokse",
-    desc: "Et fleksibelt alternativ til den traditionelle stald med spids eller ensidig tag.",
+    desc: "Et fleksibelt alternativ til den traditionelle stald som fås med 2 typer tagkonstruktioner.",
     img: "https://www.smulders.pl/wp-content/uploads/2019/01/f003_cih_outdoor-stables_SMULDERS_PL-640x427.jpg",
   },
   {
     href: "/produkter/american-barns",
     label: "American Barns",
-    desc: "Komplet stallbygning med indendørs staldbokse — leveret med alt inventar.",
+    desc: "Komplet staldbygning med indendørs staldbokse — leveret med alt inventar.",
     img: "https://www.smulders.pl/wp-content/uploads/2019/01/f001_cih_american-barns_SMULDERS_PL-640x427.jpg",
   },
   {
@@ -40,8 +40,8 @@ const categories = [
   },
   {
     href: "/produkter/doere",
-    label: "Stallboksdøre",
-    desc: "Ingen skarpe kanter, låsbart rustfrit stål dørgreb. Tre modeller tilgængelige.",
+    label: "Staldboksdøre",
+    desc: "Låsbart rustfrit stål dørgreb. Tre modeller tilgængelige.",
     img: "https://www.smulders.pl/wp-content/uploads/2019/01/f009_cih_doors_SMULDERS_PL-640x427.jpg",
   },
   {
@@ -52,8 +52,8 @@ const categories = [
   },
   {
     href: "/produkter/lavedoere",
-    label: "Lavedøre",
-    desc: "Forbedrer stallens udvendige udseende markant. Lige og buede stilarter.",
+    label: "Ladedøre",
+    desc: "Forbedrer staldens udvendige udseende markant. Lige og buede stilarter.",
     img: "https://www.smulders.pl/wp-content/uploads/2019/01/f007_cih_barn-doors_SMULDERS_PL-640x427.jpg",
   },
   {
@@ -91,15 +91,14 @@ export default function ProdukterContent() {
       </section>
 
       {/* Grid */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
+      <section className="py-10 md:py-24 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.href}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.07 }}
+              initial={{ opacity: 1, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 + i * 0.07 }}
             >
               <Link href={cat.href} className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden mb-5">

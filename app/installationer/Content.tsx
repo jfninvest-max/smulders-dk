@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const fade = { hidden: { opacity: 0, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } } };
+const fade = { hidden: { opacity: 1, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
 const projects = [
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     title: "Archipp Stajnia, Polen",
-    products: "Professional-Series, vinduer, døre, lavedøre",
+    products: "Professional-Series, vinduer, døre, ladedøre",
     images: [
       "https://www.smulders.pl/wp-content/uploads/2025/07/f001_archipp-stajnia_SMULDERS_PL.webp",
       "https://www.smulders.pl/wp-content/uploads/2025/07/f002_archipp-stajnia_SMULDERS_PL.webp",
@@ -33,7 +33,7 @@ const projects = [
   },
   {
     title: "Udendørs stald, Spanien",
-    products: "Udendørs bokse, lavedøre",
+    products: "Udendørs bokse, ladedøre",
     images: [
       "https://www.smulders.pl/wp-content/uploads/2025/07/f001_outdoor-stables-spain_SMULDERS_PL-1280x640.webp",
       "https://www.smulders.pl/wp-content/uploads/2025/07/f002_outdoor-stables-spain_SMULDERS_PL.webp",
@@ -44,7 +44,7 @@ const projects = [
   },
   {
     title: "Windsor stald, Nederlandene",
-    products: "Windsor bokse, lavedøre, vinduer",
+    products: "Windsor bokse, ladedøre, vinduer",
     images: [
       "https://www.smulders.pl/wp-content/uploads/2025/07/f001_windsor_netherlands_SMULDERS_PL-320x240.webp",
       "https://www.smulders.pl/wp-content/uploads/2015/09/f001_ADNV_Windsor_SMULDERS_PL.jpg",
@@ -56,7 +56,7 @@ const projects = [
   },
   {
     title: "Classic Wave, Nederlandene",
-    products: "Classic Wave bokse, lavedøre, vinduer, solarium",
+    products: "Classic Wave bokse, ladedøre, vinduer, solarium",
     images: [
       "https://www.smulders.pl/wp-content/uploads/2016/10/f001_TBV_Classic-Wave_SMULDERS_PL.jpg",
       "https://www.smulders.pl/wp-content/uploads/2016/10/f002_TBV_Classic-Wave_SMULDERS_PL.jpg",
@@ -78,7 +78,7 @@ const projects = [
   },
   {
     title: "Fioravanti Horse Farm, Italien",
-    products: "Windsor bokse, lavedøre, vinduer",
+    products: "Windsor bokse, ladedøre, vinduer",
     images: [
       "https://www.smulders.pl/wp-content/uploads/2019/03/f001_FVTI_Windsor_SMULDERS_PL.jpg",
       "https://www.smulders.pl/wp-content/uploads/2019/03/f002_FVTI_Windsor_SMULDERS_PL.jpg",
@@ -101,7 +101,7 @@ const projects = [
   },
   {
     title: "Windsor stald, Belgien",
-    products: "Windsor bokse, lavedøre, vinduer, døre",
+    products: "Windsor bokse, ladedøre, vinduer, døre",
     images: [
       "https://www.smulders.pl/wp-content/uploads/2019/03/f002_internal-stables_windsor_doors_windows_barn-doors_PRSH_SMULDERS_PL.jpg",
       "https://www.smulders.pl/wp-content/uploads/2019/03/f003_internal-stables_windsor_doors_windows_barn-doors_PRSH_SMULDERS_PL.jpg",
@@ -147,14 +147,13 @@ export default function InstallationerContent() {
         </div>
       </section>
 
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col gap-24">
+      <section className="py-10 md:py-24 px-6 max-w-7xl mx-auto">
+        <div className="flex flex-col gap-16 md:gap-24">
           {projects.map((proj, pi) => (
             <motion.div
               key={proj.title}
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={stagger}
             >
               <motion.div variants={fade} className="mb-8">
@@ -186,8 +185,8 @@ export default function InstallationerContent() {
         </div>
       </section>
 
-      <section className="py-20 px-6 text-center border-t border-white/5">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+      <section className="py-10 md:py-20 px-6 text-center border-t border-white/5">
+        <motion.div initial="hidden" animate="visible" variants={stagger}>
           <motion.h2 variants={fade} className="font-display text-3xl font-normal mb-5">Din stald kan blive den næste</motion.h2>
           <motion.p variants={fade} className="font-sans text-white/40 mb-10 max-w-sm mx-auto">Kontakt os og fortæl os om dit projekt.</motion.p>
           <motion.div variants={fade}>

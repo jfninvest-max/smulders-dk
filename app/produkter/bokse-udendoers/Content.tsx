@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const fade = { hidden: { opacity: 0, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } } };
+const fade = { hidden: { opacity: 1, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
 const images = [
@@ -59,15 +59,15 @@ export default function UdendoersBokseContent() {
         </div>
       </section>
 
-      <section className="py-20 px-6 max-w-7xl mx-auto">
+      <section className="py-10 md:py-20 px-6 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start mb-20">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+          <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.p variants={fade} className="font-sans text-[10px] tracking-[0.35em] text-gold uppercase mb-5">Om produktet</motion.p>
             <motion.h2 variants={fade} className="font-display text-3xl md:text-4xl font-normal mb-6">
               Friluftsstald med komfort og stil
             </motion.h2>
             <motion.p variants={fade} className="font-sans text-white/50 leading-relaxed mb-8">
-              Smulders udendørs bokse er det ideelle valg for dem, der ønsker en solid og æstetisk løsning uden en komplet stallbygning. Boksene kan konfigureres med forskellig beklædning og tagformer, og de fås i både galvaniseret og pulverlakeret finish.
+              Smulders udendørs bokse er det ideelle valg for dem, der ønsker en solid og æstetisk løsning uden en komplet staldbygning. Boksene kan konfigureres med forskellig beklædning og tagformer, og de fås i både galvaniseret og pulverlakeret finish.
             </motion.p>
             <motion.div variants={fade} className="grid grid-cols-2 gap-4">
               {features.map((f) => (
@@ -78,7 +78,7 @@ export default function UdendoersBokseContent() {
               ))}
             </motion.div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative aspect-[4/3] overflow-hidden">
+          <motion.div initial={{ opacity: 1, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }} className="relative aspect-[4/3] overflow-hidden">
             <Image
               src="https://www.smulders.pl/wp-content/uploads/2019/02/f001_outdoor-boxes_SMULDERS_PL-1280x640.jpg"
               alt="Smulders udendørs hesteboks med ensidig tagkonstruktion"
@@ -90,12 +90,12 @@ export default function UdendoersBokseContent() {
           </motion.div>
         </div>
 
-        <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="font-display text-2xl md:text-3xl font-normal mb-8">
+        <motion.h2 initial="hidden" animate="visible" variants={fade} className="font-display text-2xl md:text-3xl font-normal mb-8">
           Galleri — udendørs hestebokse
         </motion.h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {images.map((src, i) => (
-            <motion.div key={i} initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.04 }} className="relative aspect-[4/3] overflow-hidden">
+            <motion.div key={i} initial={{ opacity: 1, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: i * 0.04 }} className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={src}
                 alt={`Udendørs hesteboks galleri — billede ${i + 1}`}
@@ -109,8 +109,8 @@ export default function UdendoersBokseContent() {
         </div>
       </section>
 
-      <section className="py-20 px-6 text-center border-t border-white/5">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+      <section className="py-10 md:py-20 px-6 text-center border-t border-white/5">
+        <motion.div initial="hidden" animate="visible" variants={stagger}>
           <motion.h2 variants={fade} className="font-display text-3xl font-normal mb-5">Interesseret i udendørs hestebokse?</motion.h2>
           <motion.p variants={fade} className="font-sans text-white/40 mb-10 max-w-sm mx-auto">Kontakt os for priser og konfigurationsmuligheder.</motion.p>
           <motion.div variants={fade}>

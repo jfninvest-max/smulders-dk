@@ -21,7 +21,7 @@ const schema = {
   "@type": "Product",
   name: "Udendørs Hestebokse — Smulders",
   description:
-    "Selvstændige udendørs hestebokse med spids eller ensidig (pent) tagkonstruktion. Beklædning i plastik, bambus eller egetræ. Overfladebehandling: galvaniseret eller pulverlakeret. Fleksibelt alternativ til traditionel stallbygning.",
+    "Selvstændige udendørs hestebokse med spids eller ensidig (pent) tagkonstruktion. Beklædning i plastik, bambus eller egetræ. Overfladebehandling: galvaniseret eller pulverlakeret. Fleksibelt alternativ til traditionel staldbygning.",
   brand: { "@type": "Brand", name: "Smulders" },
   category: "Udendørs Hestebokse",
   image: "https://www.smulders.pl/wp-content/uploads/2025/07/boksy-zewnetrzne-dla-koni_SMULDERS_PL.webp",

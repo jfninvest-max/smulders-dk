@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const fade = { hidden: { opacity: 0, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } } };
+const fade = { hidden: { opacity: 1, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
 const accessories = [
@@ -74,14 +74,13 @@ export default function TilbehoerContent() {
         </div>
       </section>
 
-      <section className="py-24 px-6 max-w-7xl mx-auto">
+      <section className="py-10 md:py-24 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {accessories.map((acc, i) => (
             <motion.div
               key={acc.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 1, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.07 }}
               className="group"
             >
@@ -102,8 +101,8 @@ export default function TilbehoerContent() {
         </div>
       </section>
 
-      <section className="py-20 px-6 text-center border-t border-white/5">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+      <section className="py-10 md:py-20 px-6 text-center border-t border-white/5">
+        <motion.div initial="hidden" animate="visible" variants={stagger}>
           <motion.h2 variants={fade} className="font-display text-3xl font-normal mb-5">Spørg om priser på staldinventar tilbehør</motion.h2>
           <motion.p variants={fade} className="font-sans text-white/40 mb-10 max-w-sm mx-auto">Vi sender tilbud på det tilbehør, du har brug for.</motion.p>
           <motion.div variants={fade}>

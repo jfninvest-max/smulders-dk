@@ -28,9 +28,9 @@ const schema = {
     { "@type": "ListItem", position: 3, name: "American Barns", url: "https://smulders.dk/produkter/american-barns" },
     { "@type": "ListItem", position: 4, name: "Heste Walker", url: "https://smulders.dk/produkter/heste-walker" },
     { "@type": "ListItem", position: 5, name: "Solarier til Heste", url: "https://smulders.dk/produkter/solarier" },
-    { "@type": "ListItem", position: 6, name: "Stallboksdøre", url: "https://smulders.dk/produkter/doere" },
+    { "@type": "ListItem", position: 6, name: "Staldboksdøre", url: "https://smulders.dk/produkter/doere" },
     { "@type": "ListItem", position: 7, name: "Vinduer til Stald", url: "https://smulders.dk/produkter/vinduer" },
-    { "@type": "ListItem", position: 8, name: "Lavedøre", url: "https://smulders.dk/produkter/lavedoere" },
+    { "@type": "ListItem", position: 8, name: "Ladedøre", url: "https://smulders.dk/produkter/lavedoere" },
     { "@type": "ListItem", position: 9, name: "Staldinventar Tilbehør", url: "https://smulders.dk/produkter/tilbehoer" },
   ],
 };

@@ -8,9 +8,9 @@ const col1 = [
   { href: "/produkter/solarier", label: "Solarier" },
 ];
 const col2 = [
-  { href: "/produkter/doere", label: "Stallboksdøre" },
+  { href: "/produkter/doere", label: "Staldboksdøre" },
   { href: "/produkter/vinduer", label: "Vinduer" },
-  { href: "/produkter/lavedoere", label: "Lavedøre" },
+  { href: "/produkter/lavedoere", label: "Ladedøre" },
   { href: "/produkter/tilbehoer", label: "Tilbehør" },
   { href: "/installationer", label: "Installationer" },
 ];
@@ -49,9 +49,7 @@ export default function Footer() {
           <div>
             <p className="font-sans text-[9px] tracking-[0.3em] text-gold/50 uppercase mb-5">Kontakt</p>
             <div className="flex flex-col gap-2.5 font-sans text-xs text-white/28 leading-relaxed">
-              <a href="mailto:office@smulders.pl" className="inline-flex items-center min-h-[44px] hover:text-gold transition-colors">office@smulders.pl</a>
-              <a href="tel:+4861444405" className="inline-flex items-center min-h-[44px] hover:text-gold transition-colors">+48 61 44 41 405</a>
-              <p>ul. Grodziska 17 B<br />62-067 Rakoniewice<br />Polen</p>
+              <a href="mailto:smulders.dk@gmail.com" className="inline-flex items-center min-h-[44px] hover:text-gold transition-colors">smulders.dk@gmail.com</a>
             </div>
           </div>
         </div>

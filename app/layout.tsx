@@ -47,6 +47,18 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="da" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+(function(){
+  if(typeof globalThis==='undefined'){Object.defineProperty(Object.prototype,'__magic__',{get:function(){return this},configurable:true});__magic__.globalThis=__magic__;delete Object.prototype.__magic__;}
+  if(typeof queueMicrotask==='undefined'){globalThis.queueMicrotask=function(fn){Promise.resolve().then(fn);};}
+  if(typeof Promise.withResolvers==='undefined'){Promise.withResolvers=function(){var r,j;var p=new Promise(function(a,b){r=a;j=b;});return{promise:p,resolve:r,reject:j};};}
+  if(typeof structuredClone==='undefined'){globalThis.structuredClone=function(v){return JSON.parse(JSON.stringify(v));};}
+  if(typeof Array.prototype.at==='undefined'){Array.prototype.at=function(i){i=Math.trunc(i)||0;if(i<0)i+=this.length;if(i<0||i>=this.length)return undefined;return this[i];};}
+  if(typeof Object.hasOwn==='undefined'){Object.hasOwn=function(o,p){return Object.prototype.hasOwnProperty.call(o,p);};}
+})();
+        `.trim() }} />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
         <Nav />
         <div className="flex-1">{children}</div>

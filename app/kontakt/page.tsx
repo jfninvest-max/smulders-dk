@@ -4,14 +4,14 @@ import KontaktContent from "./Content";
 export const metadata: Metadata = {
   title: "Kontakt Smulders — Få et Tilbud på Hestebokse",
   description:
-    "Kontakt Smulders for tilbud på hestebokse og staldinventar til Danmark. Vi besvarer alle henvendelser inden for 24 timer. Tlf: +48 61 44 41 405. E-mail: office@smulders.pl",
+    "Kontakt Smulders for tilbud på hestebokse og staldinventar til Danmark. Vi besvarer alle henvendelser inden for 24 timer. E-mail: smulders.dk@gmail.com",
   alternates: {
     canonical: "https://smulders.dk/kontakt",
   },
   openGraph: {
     title: "Kontakt Smulders — Hestebokse og Staldinventar til Danmark",
     description:
-      "Kontakt os for tilbud på hestebokse, american barns, heste walker og staldinventar. Svar inden for 24 timer. +48 61 44 41 405 · office@smulders.pl",
+      "Kontakt os for tilbud på hestebokse, american barns, heste walker og staldinventar. Svar inden for 24 timer. smulders.dk@gmail.com",
     url: "https://smulders.dk/kontakt",
   },
 };
@@ -29,15 +29,7 @@ const schema = {
     description:
       "Premium producent af hestebokse og staldinventar med over 25 års erfaring. Leverer til Danmark og 30+ lande.",
     url: "https://smulders.dk",
-    telephone: "+4861444405",
-    email: "office@smulders.pl",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "ul. Grodziska 17 B",
-      addressLocality: "Rakoniewice",
-      postalCode: "62-067",
-      addressCountry: "PL",
-    },
+    email: "smulders.dk@gmail.com",
     areaServed: [
       { "@type": "Country", name: "Danmark" },
       { "@type": "Country", name: "Polen" },

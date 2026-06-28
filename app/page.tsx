@@ -23,15 +23,7 @@ const localBusinessSchema = {
   description:
     "Premium hestebokse og staldinventar med over 25 års erfaring. Belgisk produceret kvalitet leveret til Danmark og 30+ lande. 9 boksserier, american barns, heste walkere og solarier.",
   url: "https://smulders.dk",
-  telephone: "+4861444405",
-  email: "office@smulders.pl",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "ul. Grodziska 17 B",
-    addressLocality: "Rakoniewice",
-    postalCode: "62-067",
-    addressCountry: "PL",
-  },
+  email: "smulders.dk@gmail.com",
   areaServed: ["DK", "SE", "NO", "DE", "NL", "BE", "GB", "PL", "AU", "US"],
   sameAs: [
     "https://www.smulders.pl",
@@ -48,9 +40,9 @@ const localBusinessSchema = {
       { "@type": "Offer", itemOffered: { "@type": "Product", name: "American Barns" } },
       { "@type": "Offer", itemOffered: { "@type": "Product", name: "Heste Walker" } },
       { "@type": "Offer", itemOffered: { "@type": "Product", name: "Solarier til Heste" } },
-      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Stallboksdøre" } },
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Staldboksdøre" } },
       { "@type": "Offer", itemOffered: { "@type": "Product", name: "Vinduer til Stald" } },
-      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Lavedøre" } },
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Ladedøre" } },
     ],
   },
 };
@@ -64,7 +56,7 @@ const faqSchema = {
       name: "Leverer Smulders hestebokse til Danmark?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ja. Smulders leverer premium staldinventar til Danmark og over 30 andre lande. Kontakt os via office@smulders.pl eller tlf. +48 61 44 41 405 for et tilbud med levering til din adresse i Danmark.",
+        text: "Ja. Smulders leverer premium staldinventar til Danmark og over 30 andre lande. Kontakt os via smulders.dk@gmail.com for et tilbud med levering til din adresse i Danmark.",
       },
     },
     {
@@ -80,7 +72,7 @@ const faqSchema = {
       name: "Hvad er forskellen på indendørs og udendørs hestebokse?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Indendørs bokse er designet til placering inde i en stallbygning og fås i 9 serier. Udendørs bokse er selvstændige enheder med spids eller ensidig tagkonstruktion — et fleksibelt alternativ til den traditionelle stald.",
+        text: "Indendørs bokse er designet til placering inde i en staldbygning og fås i 9 serier. Udendørs bokse er selvstændige enheder som fås med 2 typer tagkonstruktioner — et fleksibelt alternativ til den traditionelle stald.",
       },
     },
     {
@@ -96,7 +88,7 @@ const faqSchema = {
       name: "Hvad er en American Barn fra Smulders?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En American Barn er en komplet stallbygning med indendørs staldbokse integreret i konstruktionen. Alt leveres fra én producent. Bygningen kræver støbt betonfundament og kan konfigureres med plastik, bambus eller egetræ beklædning.",
+        text: "En American Barn er en komplet staldbygning med indendørs staldbokse integreret i konstruktionen. Alt leveres fra én producent. Bygningen kræver støbt betonfundament og kan konfigureres med plastik, bambus eller egetræ beklædning.",
       },
     },
     {
@@ -128,7 +120,7 @@ const faqSchema = {
       name: "Kan Smulders levere et komplet staldprojekt?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ja. Smulders leverer staldbokse, døre, vinduer, lavedøre, heste walker, solarium og tilbehør fra én producent. Vores tekniske afdeling rådgiver om layout og konfiguration via CAD-tegninger tilpasset dit areal.",
+        text: "Ja. Smulders leverer staldbokse, døre, vinduer, ladedøre, heste walker, solarium og tilbehør fra én producent. Vores tekniske afdeling rådgiver om layout og konfiguration tilpasset dit areal.",
       },
     },
     {

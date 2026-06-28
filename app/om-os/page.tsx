@@ -27,18 +27,10 @@ const schema = {
     name: "Smulders",
     description: "Premium producent af hestebokse og staldinventar med over 25 års erfaring",
     url: "https://smulders.dk",
-    telephone: "+4861444405",
-    email: "office@smulders.pl",
+    email: "smulders.dk@gmail.com",
     foundingDate: "2000",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "ul. Grodziska 17 B",
-      addressLocality: "Rakoniewice",
-      postalCode: "62-067",
-      addressCountry: "PL",
-    },
     numberOfEmployees: { "@type": "QuantitativeValue", minValue: 10, maxValue: 50 },
-    knowsAbout: ["Hestebokse", "Staldinventar", "American Barns", "Heste Walker", "Heste Solarium", "Stallboksdøre"],
+    knowsAbout: ["Hestebokse", "Staldinventar", "American Barns", "Heste Walker", "Heste Solarium", "Staldboksdøre"],
   },
 };
 

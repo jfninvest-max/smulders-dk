@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const fade = { hidden: { opacity: 0, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } } };
+const fade = { hidden: { opacity: 1, y: 36 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
 const images = [
@@ -39,7 +39,7 @@ export default function AmericanBarnsContent() {
       <section className="relative h-[55vh] overflow-hidden flex items-end">
         <Image
           src="https://www.smulders.pl/wp-content/uploads/2019/02/f000_american-barns_smulders_pl.jpg"
-          alt="Smulders American Barn — komplet stallbygning med indendørs hestebokse"
+          alt="Smulders American Barn — komplet staldbygning med indendørs hestebokse"
           fill
           priority
           className="object-cover"
@@ -51,17 +51,17 @@ export default function AmericanBarnsContent() {
             <motion.p variants={fade} className="font-sans text-[10px] tracking-[0.35em] text-gold uppercase mb-3">Produkter</motion.p>
             <motion.h1 variants={fade} className="font-display text-4xl md:text-6xl font-normal mb-4">American Barns</motion.h1>
             <motion.p variants={fade} className="font-sans text-white/50 max-w-lg leading-relaxed">
-              En komplet stallbygning med indendørs hestebokse — alt leveret fra én producent.
+              En komplet staldbygning med indendørs hestebokse — alt leveret fra én producent.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 px-6 max-w-7xl mx-auto">
+      <section className="py-10 md:py-20 px-6 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start mb-20">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+          <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.h2 variants={fade} className="font-display text-3xl md:text-4xl font-normal mb-6">
-              Den komplette stallbygning
+              Den komplette staldbygning
             </motion.h2>
             <motion.p variants={fade} className="font-sans text-white/50 leading-relaxed mb-8">
               Smulders American Barns er den totale løsning for den seriøse hesteejer. Bygningen kombinerer robuste ydervægge med vores premium indendørs staldbokse og kan konfigureres med valgfri beklædning og overfladebehandling. Fundament medfølger ikke, men vi rådgiver gerne.
@@ -75,7 +75,7 @@ export default function AmericanBarnsContent() {
               ))}
             </motion.div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative aspect-[4/3] overflow-hidden">
+          <motion.div initial={{ opacity: 1, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }} className="relative aspect-[4/3] overflow-hidden">
             <Image
               src="https://www.smulders.pl/wp-content/uploads/2019/02/f001_american-barns_smulders_pl.jpg"
               alt="American Barn indvendig med indendørs hestebokse fra Smulders"
@@ -89,7 +89,7 @@ export default function AmericanBarnsContent() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {images.map((src, i) => (
-            <motion.div key={i} initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.04 }} className="relative aspect-[4/3] overflow-hidden">
+            <motion.div key={i} initial={{ opacity: 1, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: i * 0.04 }} className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={src}
                 alt={`American Barn hestestald galleri — billede ${i + 1}`}
@@ -103,8 +103,8 @@ export default function AmericanBarnsContent() {
         </div>
       </section>
 
-      <section className="py-20 px-6 text-center border-t border-white/5">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+      <section className="py-10 md:py-20 px-6 text-center border-t border-white/5">
+        <motion.div initial="hidden" animate="visible" variants={stagger}>
           <motion.h2 variants={fade} className="font-display text-3xl font-normal mb-5">Planlæg din American Barn</motion.h2>
           <motion.p variants={fade} className="font-sans text-white/40 mb-10 max-w-sm mx-auto">Vi hjælper med projektering og tilbud tilpasset dit areal.</motion.p>
           <motion.div variants={fade}>
